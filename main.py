@@ -17,7 +17,7 @@ async def on_ready():
         assets=config['assets'],
         start=datetime.combine(datetime.now().date(), time(3, 0, 0)),
     )
-    await client.change_presence(activity=game, status=discord.Status.online)
+    await client.change_presence(activity=game, status=discord.Status.idle)
 
 if __name__ == "__main__":
     client.run(config['token'], log_handler=None)
