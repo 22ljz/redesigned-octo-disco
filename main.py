@@ -1,7 +1,8 @@
-from datetime import datetime, time
+from datetime import datetime
 import discord
 import json
 import os
+import asyncio
 
 config = json.loads(os.environ['CONFIG'])
 
@@ -15,9 +16,11 @@ async def on_ready():
         application_id=config['application_id'],
         name=config['name'],
         assets=config['assets'],
-        start=datetime.combine(datetime.now().date(), time(3, 0, 0)),
+        start=datetime.now(),
     )
-    await client.change_presence(activity=game, status=discord.Status.idle)
+    await client.change_presence(activity=game, status=discord.Status.online)
+    await asyncio.sleep(3 * 60 * 60)
+    asyncio.get_running_loop().stop()
 
 if __name__ == "__main__":
     client.run(config['token'], log_handler=None)
