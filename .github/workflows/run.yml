@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron:  '30 9 * * *'
-    - cron:  '30 6 * * 0,6'
+    - cron:  '30 10 * * *'
+    - cron:  '0 6 * * 0,6'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

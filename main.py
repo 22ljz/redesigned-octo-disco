@@ -19,7 +19,7 @@ async def on_ready():
         start=datetime.now(),
     )
     await client.change_presence(activity=game, status=discord.Status.online)
-    await asyncio.sleep(3 * 60 * 60)
+    await asyncio.sleep(4 * 60 * 60)
     asyncio.get_running_loop().stop()
 
 if __name__ == "__main__":
