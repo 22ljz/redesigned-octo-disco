@@ -3,7 +3,7 @@ import discord
 import json
 import os
 
-config = json.loads(os.envirn['CONFIG'])
+config = json.loads(os.environ['CONFIG'])
 
 client = discord.Client()
 
