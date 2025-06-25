@@ -23,4 +23,8 @@ async def on_ready():
     asyncio.get_running_loop().stop()
 
 if __name__ == "__main__":
-    client.run(config['token'], log_handler=None)
+    try:
+        client.run(config['token'], log_handler=None)
+    except Exception as e:
+        pass
+
