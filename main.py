@@ -20,11 +20,7 @@ async def on_ready():
     )
     await client.change_presence(activity=game, status=discord.Status.online)
     await asyncio.sleep(4 * 60 * 60)
-    asyncio.get_running_loop().stop()
+    client.close()
 
 if __name__ == "__main__":
-    try:
-        client.run(config['token'], log_handler=None)
-    except Exception as e:
-        pass
-
+    client.run(config['token'], log_handler=None)
