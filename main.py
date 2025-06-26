@@ -20,7 +20,7 @@ async def on_ready():
     )
     await client.change_presence(activity=game, status=discord.Status.online)
     await asyncio.sleep(60)
-    client.close()
+    await client.close()
 
 if __name__ == "__main__":
     client.run(config['token'], log_handler=None)
