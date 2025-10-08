@@ -1,0 +1,18 @@
+name: GFW
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron:  '0 0 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
+          curl -sSL https://github.com/cokebar/gfwlist2dnsmasq/raw/refs/heads/master/gfwlist2dnsmasq.sh | bash -s -- -l -o gfwlist_domain.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "generated"
+          git push
