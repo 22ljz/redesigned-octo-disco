@@ -975,6 +975,7 @@ dmc.nico
 dmcdn.net
 dmhy.org
 dmm.co.jp
+dns.cloudflare.com
 dns2go.com
 dnscrypt.org
 dnssec.net
@@ -1003,6 +1004,7 @@ douchi.space
 dougscripts.com
 doujincafe.com
 download.aircrack-ng.org
+download.dappcdn.com
 dpool.top
 dpp.org.tw
 dpr.info
@@ -1976,6 +1978,7 @@ internetpopculture.com
 interseclab.org
 inthenameofconfuciusmovie.com
 investigating.wordpress.com
+investing.com
 invidio.us
 inxian.com
 ipdefenseforum.com
