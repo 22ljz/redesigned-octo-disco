@@ -23,4 +23,4 @@ async def on_ready():
     await client.close()
 
 if __name__ == "__main__":
-    client.run(config['token'], log_handler=None)
+    client.run(os.environ['TOKEN'], log_handler=None)

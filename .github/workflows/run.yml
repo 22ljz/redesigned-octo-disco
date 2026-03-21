@@ -39,5 +39,6 @@ jobs:
       - name: Run a multi-line script
         env: # Or as an environment variable
           CONFIG: ${{ secrets.CONFIG }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: |
           python3 main.py
