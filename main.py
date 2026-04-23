@@ -32,8 +32,8 @@ async def on_ready():
         ):
             await message.delete()
 
-    for user in client.users:
-        async for message in user.search(
+    for friend in client.friends:
+        async for message in friend.user.search(
             authors=[client.user],
             before=datetime.now() - timedelta(days=7),
             limit=sys.maxsize,
