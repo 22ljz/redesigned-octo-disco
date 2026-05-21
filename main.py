@@ -16,7 +16,6 @@ async def on_ready():
         application_id=config['application_id'],
         name=config['name'],
         assets=config['assets'],
-        start=datetime.now(),
     )
     await client.change_presence(activity=game, status=discord.Status.online)
     await asyncio.sleep(4 * 60 * 60)
